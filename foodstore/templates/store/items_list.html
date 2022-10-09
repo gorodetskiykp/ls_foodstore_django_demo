@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Товары{% endblock %}
+
+{% block page_title %}Товары{% endblock %}
+
+{% block content %}
+
+{% for item in items %}
+    <li>{{ item.title }}, {{ item.price }} руб.</li>
+{% endfor %}
+{% endblock %}

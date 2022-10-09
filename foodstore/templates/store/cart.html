@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block page_title %}Корзина{% endblock %}
+
+{% block content %}
+
+{% for position in positions %}
+    <li>{{ position.created | date:"d.m.Y"}}. {{ position.item.title }} -
+        {{ position.quаntity }} * {{ position.item.price }} =
+        {{ position.total_position_price}}
+        </li>
+{% endfor %}
+
+{% endblock %}
